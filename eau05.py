@@ -1,6 +1,6 @@
 ############### String dans string ###############
 
-### Fuction ###
+### Function ###
 
 
 

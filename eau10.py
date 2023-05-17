@@ -1,6 +1,6 @@
 ############### Index wanted ###############
 
-### Fuction ###
+### Function ###
 
 
 

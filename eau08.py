@@ -1,6 +1,6 @@
 ############### Chiffres only ###############
 
-### Fuction ###
+### Function ###
 
 
 

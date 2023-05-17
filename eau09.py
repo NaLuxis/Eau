@@ -1,6 +1,6 @@
 ############### Entre min et max ###############
 
-### Fuction ###
+### Function ###
 
 
 

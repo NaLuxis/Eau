@@ -1,6 +1,6 @@
 ############### Différence minimum absolue ###############
 
-### Fuction ###
+### Function ###
 
 
 

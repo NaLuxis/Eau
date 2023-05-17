@@ -1,6 +1,6 @@
 ############### Combinaisons de 2 nombres ###############
 
-### Fuction ###
+### Function ###
 
 
 

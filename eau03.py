@@ -1,6 +1,6 @@
 ############### Suite de Fibonacci ###############
 
-### Fuction ###
+### Function ###
 
 
 

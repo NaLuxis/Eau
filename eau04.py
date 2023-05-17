@@ -1,6 +1,6 @@
 ############### Prochain nombre premier ###############
 
-### Fuction ###
+### Function ###
 
 
 

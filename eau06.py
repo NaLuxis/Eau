@@ -1,6 +1,6 @@
 ############### Majuscule sur deux ###############
 
-### Fuction ###
+### Function ###
 
 
 

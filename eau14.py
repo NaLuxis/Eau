@@ -1,6 +1,6 @@
 ############### Par ordre Ascii ###############
 
-### Fuction ###
+### Function ###
 
 
 

@@ -1,6 +1,6 @@
 ############### Tri par sélection ###############
 
-### Fuction ###
+### Function ###
 
 
 

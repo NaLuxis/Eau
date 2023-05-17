@@ -1,6 +1,6 @@
 ############### Paramètres à l’envers ###############
 
-### Fuction ###
+### Function ###
 
 
 
