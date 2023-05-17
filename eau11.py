@@ -1,0 +1,2 @@
+############### Différence minimum absolue ###############
+
