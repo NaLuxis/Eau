@@ -6,55 +6,45 @@ from typing import List
 
 ### Function ###
 
-def validate_combinaison(combination: List[int]) -> List[int]:
-    """Valide les combinaisonts données de 3 chiffres pour qu'elle soit unique et les 3 chiffres soit dans l'ordre croissant"""
+def create_combination() -> List[List[int]]:
+    """Crée une liste de liste d'integer de 000 à 999"""
 
-    print(combination)
-
-
-def create_combination() -> List[int]:
-    """A définir"""
-
-    combination = [0, 0, 0]
+    combination = []
 
     for hundreds in range(10):
-        combination[0] = hundreds
         for tens in range(10):
-            combination[1] = tens
             for units in range(10):
-                combination[2] = units
-                validate_combinaison(combination)
-
+                combination.append([hundreds, tens, units])
     
+    return combination
 
 
-create_combination()
+def validate_combination(combination: List[List[int]]) -> List[int]:
+    """Valide une combinaisont donnée de 3 chiffres pour qu'elle soit unique et dans l'ordre croissant"""
+
+    valid_combinations = []
+
+    for num in combination:
+        if num[0] < num[1] < num[2]:
+            valid_combinations.append(num)
+
+    return valid_combinations
 
 
+def print_combination(valide_combination: List[List[int]]) -> str:
+    """Affiche les combinaisons valides correctement"""
+
+    for num in valide_combination:
+        for chart in num:
+            print(f"{chart}", end="")
+        print(f",", end=" ")
+    print("")
 
 
-
-
-### Error ###
-
-
-
-
-### Parsing ###
-
-
-
-
-### Problem solving ###
-
-def main() -> None:
-    """Point d'entrée du programme"""
-    
-
-
-
+### Problem solving ###    
 ### Result ###
 
+result = print_combination(validate_combination(create_combination()))
 
-if __name__ == "__main__":
-    main()
+
+
