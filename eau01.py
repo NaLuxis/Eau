@@ -40,7 +40,7 @@ def validate(good_format_combination: List[List[str]]) -> List[List[str]]:
     return valid_combinations
 
 
-def print_combination(valide_list: List[List[int]]) -> str:
+def print_combination(valide_list: List[List[int]]) -> None:
     """Affiche les combinaisons valides correctement"""
 
     for num in valide_list:
