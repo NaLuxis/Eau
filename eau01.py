@@ -4,52 +4,61 @@ from typing import List
 
 ### Function ###
 
-def create_combination() -> List[List[int]]:
+def create_combination() -> List[List[str]]:
     """Combination from 0000 to 9999"""
 
-    combination_list = []
+    combination = []
 
-    for thousands in range(10):    
-        for hundreds in range(10):
-            for tens in range(10):
-                for units in range(10):
-                    combination_list.append([thousands, hundreds, tens, units])
+    for num in range(10000):
+        combination.append([f"{num:04}"])
+        
+    return combination
+
+
+def format_list(list_combination: List[List[str]]) -> List[List[str]]:
     
-    return combination_list
+    good_format = []
+
+    for num in list_combination:
+        for string_number in num:
+            first_number = string_number[0:2]
+            second_number = string_number[2:4]
+            good_format.append([first_number,second_number])
+
+    return good_format
 
 
-def validate_combination(combination_list: List[List[int]]) -> List[int]:
-    """Unique and ascending combination"""
+def validate(good_format_combination: List[List[str]]) -> List[List[str]]:
+    """Unique combination"""
 
-    # print(combination_list)
     valid_combinations = []
 
-    for num in combination_list:
-        number_1 = num[0:2]
-        number_2 = num[2:4]
-        print(f"{number_1} {number_2}")
+    for num in good_format_combination:
+        if num[0] <= num[1] and num[0] != num[1]:
+            valid_combinations.append(num)
 
     return valid_combinations
 
 
-def print_combination(valide_combination_list: List[List[int]]) -> str:
+def print_combination(valide_list: List[List[int]]) -> str:
     """Affiche les combinaisons valides correctement"""
 
-    for num in valide_combination_list:
-        for chart in num:
-            print(f"{chart}", end="")
+    for num in valide_list:
+        print(f"{num[0]} {num[1]}", end="")
 
-        if num == valide_combination_list[-1]:
+        if num == valide_list[-1]:
             break
-        print(f",", end=" ")   
+        print("", end=",  ")
     print("")
-
 
 ### Problem solving ###
 
 all_combination = create_combination()
-all_valide_combination = validate_combination(all_combination)
+
+good_format_combination = format_list(all_combination)
+
+valide_combination = validate(good_format_combination)
 
 ### Result ###
 
-print_combination(all_valide_combination)
+print_combination(valide_combination)
