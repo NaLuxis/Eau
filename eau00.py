@@ -17,7 +17,7 @@ def create_combination() -> List[List[int]]:
     return combination_list
 
 
-def validate_combination(combination_list: List[List[int]]) -> List[int]:
+def validate(combination_list: List[List[int]]) -> List[int]:
     """Unique and ascending combination"""
 
     valid_combinations = []
@@ -29,7 +29,7 @@ def validate_combination(combination_list: List[List[int]]) -> List[int]:
     return valid_combinations
 
 
-def print_combination(valide_combination_list: List[List[int]]) -> str:
+def print_result(valide_combination_list: List[List[int]]) -> str:
     """Affiche les combinaisons valides correctement"""
 
     for num in valide_combination_list:
@@ -45,8 +45,8 @@ def print_combination(valide_combination_list: List[List[int]]) -> str:
 ### Problem solving ###    
 
 all_combination = create_combination()
-all_valide_combination = validate_combination(all_combination)
+all_valide_combination = validate(all_combination)
 
 ### Result ###
 
-print_combination(all_valide_combination)
+print_result(all_valide_combination)
