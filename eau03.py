@@ -16,6 +16,9 @@ def addition(a: int, b: int) -> int:
 def fibonacci(target: int) -> int:
 
     sequence = [0, 1]
+
+    if target == 0:
+        return 0
     
     for index in range(target - 1):
 
@@ -34,7 +37,7 @@ def have_not_correct_number_of_arguments() -> None:
         exit()
 
 
-def is_number(target: int) -> bool:
+def is_number(target: any) -> bool:
 
     if not str(target).isdigit():
         return True
@@ -58,7 +61,7 @@ def error_arg(target: int) -> None:
         print(-1)
         exit()
 
-    if is_negative(target) or is_number_too_long(target):
+    if is_negative(target):
         print(-1)
         exit()
 
