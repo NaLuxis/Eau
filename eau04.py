@@ -8,13 +8,21 @@ from typing import List
 
 def is_prime_number(target: int) -> bool:
 
-    for num in range(2,int(target ** 0.5) + 1):
+    if target <= 1:
+        return False
+    
+    if target == 2:
+        return True
+    
+    if target % 2 == 0:
+        return False
+    else:
+        for num in range(3, int(target ** 0.5) + 1, 2):
 
-        if target % num == 0 and num != target:
-            return False
-        
-        if num == target:
-            return True
+            if target % num == 0:
+                return False
+            
+    return True
 
 
 def give_all_prime_number(target: int) -> int:
@@ -31,18 +39,14 @@ def give_all_prime_number(target: int) -> int:
 
 def add_one_prime_number(target: int) -> int:
 
-    count = target
+    target += 1
 
-    for num in range(count, count + 10_000):
+    while not is_prime_number(target):
 
-        if is_prime_number(num):
-            return num
+        target += 1
+    
+    return target
         
-        count =+ 1
-
-        print(count)
-
-print(add_one_prime_number(10))
 
 def have_not_correct_number_of_arguments() -> None:
 
@@ -86,10 +90,10 @@ target_prime_number = int(sys.argv[1])
 
 ### Problem solving ###
 
-all_prime_number = give_all_prime_number(target_prime_number)
+last_prime_number = give_all_prime_number(target_prime_number)
 
-next_prime_number = add_one_prime_number(all_prime_number)
+next_prime_number = add_one_prime_number(last_prime_number)
 
 ### Result ###
 
-# print(next_prime_number)
+print(next_prime_number)
