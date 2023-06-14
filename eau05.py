@@ -1,8 +1,6 @@
 ############### String dans string ###############
 
-import sys
-
-import re
+import sys, re
 
 ### Function ###
 

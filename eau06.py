@@ -1,8 +1,6 @@
 ############### Majuscule sur deux ###############
 
-import sys
-
-import re
+import sys, re
 
 ### Function ###
 

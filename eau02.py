@@ -1,6 +1,7 @@
 ############### Paramètres à l’envers ###############
 
 import sys
+
 from typing import List
 
 ### Function ###
