@@ -1,5 +1,7 @@
 ############### Majuscule ###############
 
+import sys, re
+
 ### Function ###
 
 
