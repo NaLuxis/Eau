@@ -4,8 +4,6 @@ import sys
 
 from typing import List
 
-sys.set_int_max_str_digits(100000)
-
 ### Function ###
 
 def addition(a: int, b: int) -> int:
