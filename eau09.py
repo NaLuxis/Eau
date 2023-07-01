@@ -6,10 +6,10 @@ from typing import List
 
 ### Function ###
 
-def number_sort(argument_1: int, argument_2: int) -> List[int]:
+def number_sort(argument_1: str, argument_2: str) -> List[int]:
 
-    argument_1 = sys.argv[1]
-    argument_2 = sys.argv[2]
+    argument_1 = int(sys.argv[1])
+    argument_2 = int(sys.argv[2])
 
     list_to_sort = [argument_1, argument_2]
 
