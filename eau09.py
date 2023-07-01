@@ -48,7 +48,7 @@ def incorrect_argument_count() -> None:
 
 def is_number(target: any) -> bool:
 
-    if not str(target).isdigit():
+    if str(target).isdigit():
         return True
 
 
@@ -60,7 +60,7 @@ def is_equal(number_1: int, number_2: int) -> bool:
 
 def error_argument() -> None:
 
-    if not is_number(sys.argv[1]) and not is_number(sys.argv[2]):
+    if is_number(sys.argv[1]) and is_number(sys.argv[2]):
         pass
     else:
         print("Error")
